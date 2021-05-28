@@ -2,11 +2,10 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import ProductFeed from "../components/ProductFeed";
+import React, { useRef } from "react";
+
 export default function Home({ products }) {
-  console.log(products);
-
-  console.log(products);
-
+  console.log(process.env.GOOGLE_ID);
   return (
     <div className="bg-gray-100">
       <Head>
@@ -19,7 +18,6 @@ export default function Home({ products }) {
         <Banner />
         {/* Product Feed */}
         {<ProductFeed items={products} name="ADitys" />}
-        console.log(products) ;
       </main>
     </div>
   );
@@ -35,3 +33,20 @@ export async function getServerSideProps(context) {
     },
   };
 }
+/* const emailref = useRef(null);
+const passwordref = useRef(null);
+const register = (e) => {
+  e.preventDefault();
+  auth
+    .createUserWithEmailAndPassword(
+      emailref.current.value,
+      passwordref.current.value
+    )
+    .then((authUser) => {
+      console.log(authUser);
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+};
+ */
