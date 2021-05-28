@@ -50,7 +50,7 @@ function checkout() {
               <h2 className="whitespace-nowrap">
                 Subtotal({items.length} items:)
                 <span className="font-bold">
-                  <Currency quantity={total} currenecy="INR"></Currency>
+                  <Currency quantity={total} currenecy="GBP" />
                 </span>
               </h2>
               <button
